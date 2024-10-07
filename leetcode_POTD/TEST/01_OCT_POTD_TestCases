@@ -1,0 +1,87 @@
+Test Case 1: Basic test case with typical inputs
+Input:
+arr = {1, 2, 3, 4, 5, 10}, k = 5
+Expected Output:
+true
+Test Case Description:
+This case tests typical behavior where the array can be rearranged into pairs such that the sum of each pair is divisible by k = 5. The pairs (1, 4), (2, 3), and (5, 10) satisfy this condition.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test Case 2: Test case with negatives and positives
+Input:
+arr = {-10, 10, -5, 5}, k = 5
+Expected Output:
+true
+Test Case Description:
+This case tests the function's ability to handle both negative and positive numbers. The pairs (-10, 10) and (-5, 5) sum to 0, which is divisible by 5.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test Case 3: Test case where sum condition cannot be satisfied
+Input:
+arr = {1, 2, 3, 4, 5}, k = 5
+Expected Output:
+false
+Test Case Description:
+This case tests the scenario where it is impossible to rearrange the array into pairs whose sum is divisible by k = 5. There are no valid pairs here that satisfy the condition.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test Case 4: Test case with all elements zero
+Input:
+arr = {0, 0, 0, 0}, k = 3
+Expected Output:
+true
+Test Case Description:
+This tests if the function can handle an array where all elements are zero. Since any number of zeros can always be rearranged into valid pairs, the function should return true.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test Case 5: Test case with odd number of zeros
+Input:
+arr = {0, 0, 0}, k = 2
+Expected Output:
+false
+Test Case Description:
+This tests an edge case where the array contains an odd number of zeros. Since one zero would be left unpaired, the function should return false.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test Case 6: Performance test with large array (All elements divisible by k)
+Input:
+arr(1e5, 10), k = 10
+Expected Output:
+true
+Test Case Description:
+This performance test ensures that the function can handle large input sizes. Here, the array consists of 100000 elements, all equal to 10, which is divisible by k = 10. The function should return true.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test Case 7: Test case with non-divisible sum condition
+Input:
+arr = {-3, 1, 2, -4, 7, 5}, k = 3
+Expected Output:
+false
+Test Case Description:
+This tests a case where the array cannot be rearranged into valid pairs for k = 3. The sums of possible pairs do not result in numbers divisible by 3.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test Case 8: Test case with k = 1
+Input:
+arr = {1, 2, 3, 4, 5}, k = 1
+Expected Output:
+true
+Test Case Description:
+This edge case tests the scenario where k = 1. Since every number is divisible by 1, any array can be rearranged into valid pairs, so the function should return true.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test Case 9: Test case where sum condition cannot be satisfied with random values
+Input:
+arr = {2, 9, 4, 7, 1, 8}, k = 5
+Expected Output:
+false
+Test Case Description:
+This case checks for random values where no valid rearrangement can be made to satisfy the sum divisibility condition for k = 5.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test Case 10: Test case with large numbers
+Input:
+arr = {-1e9, 1e9, -5e8, 5e8}, k = 1e9
+Expected Output:
+true
+Test Case Description:
+This performance test ensures that the function can handle large numbers and values near the upper constraint limits. The pairs (-1e9, 1e9) and (-5e8, 5e8) satisfy the condition, so the function should return true.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test Case 11: Test case with random values (Robustness)
+Input:
+arr = {-10, 50, 0, 50, -10}, k = 20
+Expected Output:
+false
+Test Case Description:
+This test case checks the robustness of the function when dealing with random values, both positive and negative, with multiple occurrences of the same number. The pairs (-10, 50), (-10, 50), and (0, 0) sum to multiples of 20
